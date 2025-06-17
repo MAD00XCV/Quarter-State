@@ -1,0 +1,53 @@
+class Property {
+  final int id;
+  final String title;
+  final String imageUrl;
+  final double totalValue;
+  final double sharePrice;
+  int collectedShares;
+  final int totalShares;
+  final String status;
+  final List<String> imageUrls; 
+
+  Property({
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+    required this.totalValue,
+    required this.sharePrice,
+    required this.collectedShares,
+    required this.totalShares,
+    required this.status,
+    required this.imageUrls, 
+  });
+
+  int get availableShares => totalShares - collectedShares;
+
+  factory Property.fromJson(Map<String, dynamic> json) {
+    return Property(
+      id: json['id'] ?? 0,
+      title: json['title'] ?? '',
+      imageUrl: json['imageUrl'] ?? '',
+      totalValue: (json['totalValue'] ?? 0).toDouble(),
+      sharePrice: (json['sharePrice'] ?? 0).toDouble(),
+      collectedShares: json['collectedShares'] ?? 0,
+      totalShares: json['totalShares'] ?? 0,
+      status: json['status'] ?? 'Unknown',
+      imageUrls: List<String>.from(json['imageUrls'] ?? []), 
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'imageUrl': imageUrl,
+      'totalValue': totalValue,
+      'sharePrice': sharePrice,
+      'collectedShares': collectedShares,
+      'totalShares': totalShares,
+      'status': status,
+      'imageUrls': imageUrls, 
+    };
+  }
+}

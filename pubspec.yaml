@@ -1,0 +1,51 @@
+name: dahab_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+
+
+environment:
+  sdk: ^3.6.2
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1
+  cupertino_icons: ^1.0.8
+  http: 1.4.0
+  logging: ^1.2.0
+  shared_preferences: ^2.2.2
+  signalr_core: ^1.1.2
+  intl: ^0.19.0
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+
+flutter:
+  assets:
+    - assets/images/Group.png
+    - assets/images/background_onboarding.png
+    - assets/images/Group1.png
+    - assets/images/onboarding1.png
+    - assets/images/onboarding2.png
+    - assets/images/onboarding3.png
+    - assets/images/googleicon.png
+    - assets/images/f.png
+    - assets/images/undraw_city_life_gnpr 1.png 
+    - assets/images/image1.png
+    - assets/images/image3.png
+    - assets/images/pr.jpg
+    - assets/images/image2.png
+
+
+
+  
+  uses-material-design: true
+
+  
